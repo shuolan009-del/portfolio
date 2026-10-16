@@ -3,378 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>兰朔 · 作品集</title>
-<meta name="description" content="兰朔 · 前端体验工程师作品集：嘉禾智能商管平台、AI 电商客服、AI 电商运营助手、AI 知识库。">
+<title>正在前往作品集 · 兰朔</title>
+<!-- 立即跳转（0 秒）。用 refresh 而非纯 JS：禁用 JS 的环境也能跳。 -->
+<meta http-equiv="refresh" content="0; url=https://82.157.150.111/portfolio/#v03">
 <link rel="canonical" href="https://82.157.150.111/portfolio/">
-<meta property="og:title" content="兰朔 · 作品集">
-<meta property="og:description" content="前端体验工程师，专注 AI 应用从界面到落地的完整链路。">
-<meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' rx='10' fill='%232e5f3b'/><text x='24' y='33' font-size='26' text-anchor='middle' fill='%23f4f8f0' font-family='Georgia,serif'>L</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
+  min-height:100vh;display:grid;place-items:center;
   font-family:"Segoe UI","Noto Sans SC",-apple-system,sans-serif;
-  color:#1d2a20;background:#f4f8f0;line-height:1.7;
-  -webkit-font-smoothing:antialiased;
+  color:#1d2a20;background:#f4f8f0;text-align:center;padding:24px;
 }
-a{text-decoration:none;color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
-
-/* ── 顶部导航 ── */
-.nav{
-  position:sticky;top:0;z-index:10;
-  background:rgba(244,248,240,.88);backdrop-filter:blur(12px);
-  border-bottom:1px solid #d7e3d0;
-}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:.02em}
-.brand svg{width:24px;height:24px;flex:none}
-.nav-links{display:flex;gap:28px;font-size:13.5px;color:#5c6b5e}
-.nav-links a{transition:color .15s}
-.nav-links a:hover{color:#2e5f3b}
-
-/* ── Hero ── */
-.hero{padding:104px 0 60px;text-align:center;position:relative}
+.box{max-width:440px}
+svg{width:60px;height:60px;margin-bottom:22px}
 .kicker{
   display:inline-flex;align-items:center;gap:10px;
-  font-size:12px;letter-spacing:.24em;color:#3e7d4f;margin-bottom:22px;
+  font-size:11.5px;letter-spacing:.24em;color:#3e7d4f;margin-bottom:14px;
 }
-.kicker::before,.kicker::after{content:"";width:30px;height:1.5px;background:#3e7d4f}
-h1{
-  font-family:Georgia,"Noto Serif SC",serif;
-  font-size:56px;font-weight:400;line-height:1.14;letter-spacing:.01em;
+.kicker::before,.kicker::after{content:"";width:26px;height:1.5px;background:#3e7d4f}
+h1{font-family:Georgia,"Noto Serif SC",serif;font-size:26px;font-weight:400;color:#2e5f3b}
+p{margin:14px 0 0;font-size:14px;line-height:1.9;color:#5c6b5e}
+a.go{
+  display:inline-flex;align-items:center;gap:8px;margin-top:26px;
+  padding:13px 28px;border-radius:999px;
+  background:#2e5f3b;color:#f4f8f0;font-size:14.5px;
+  transition:transform .18s ease,background .18s ease;
 }
-h1 em{
-  font-style:italic;position:relative;z-index:0;color:#2e5f3b;
+a.go:hover{background:#275434;transform:translateY(-2px)}
+a.go svg{width:15px;height:15px;margin:0;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.src{
+  margin-top:30px;padding-top:18px;border-top:1px solid #d7e3d0;
+  font-size:12px;color:#8aa08c;letter-spacing:.04em;word-break:break-all;
 }
-h1 em::after{
-  content:"";position:absolute;left:0;right:0;bottom:6px;height:8px;
-  background:#8fbf9a;z-index:-1;opacity:.55;
+/* 转圈指示器：JS 跳转生效时可见，2s 后移除 */
+.spin{
+  width:26px;height:26px;margin:0 auto 18px;
+  border:2px solid #d7e3d0;border-top-color:#3e7d4f;border-radius:50%;
+  animation:spin .8s linear infinite;
 }
-.sub{margin:22px auto 0;max-width:600px;font-size:16px;line-height:1.95;color:#5c6b5e}
-
-.contact{
-  display:flex;justify-content:center;align-items:center;gap:26px;
-  margin-top:26px;font-size:13.5px;color:#5c6b5e;letter-spacing:.04em;
-}
-.contact span{display:inline-flex;align-items:center;gap:8px}
-.contact svg{width:15px;height:15px;stroke:#3e7d4f;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.contact .sep{width:1px;height:16px;background:#d7e3d0}
-.contact a{border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
-.contact a:hover{color:#2e5f3b;border-bottom-color:#8fbf9a}
-
-.cta{
-  display:inline-flex;align-items:center;gap:10px;margin-top:34px;
-  padding:14px 30px;border-radius:999px;
-  background:#2e5f3b;color:#f4f8f0;font-size:15px;font-weight:500;
-  box-shadow:0 8px 22px rgba(46,95,59,.22);
-  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
-}
-.cta:hover{background:#275434;transform:translateY(-2px);box-shadow:0 12px 28px rgba(46,95,59,.28)}
-.cta svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-/* ── 统计条 ── */
-.stats{
-  display:flex;justify-content:center;gap:56px;
-  margin:56px 0 0;padding:24px 0;
-  border-top:1px solid #d7e3d0;border-bottom:1px solid #d7e3d0;
-}
-.stats div{text-align:center}
-.stats b{display:block;font-family:Georgia,serif;font-size:28px;font-weight:400;color:#2e5f3b}
-.stats span{font-size:12px;letter-spacing:.12em;color:#5c6b5e}
-
-/* ── 关于 ── */
-.about{
-  margin:72px 0 0;padding:40px 44px;
-  border:1px solid #d7e3d0;border-radius:16px;background:#fafcf7;
-  display:flex;gap:36px;align-items:center;
-}
-.about-ava{
-  width:96px;height:96px;border-radius:50%;flex:none;
-  background:linear-gradient(140deg,#3e7d4f,#8fbf9a);
-  display:grid;place-items:center;
-  font-family:Georgia,serif;font-size:38px;color:#f4f8f0;
-}
-.about p{font-size:15px;line-height:1.95;color:#41503f}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.tags i{
-  font-style:normal;font-size:12px;letter-spacing:.06em;
-  padding:5px 12px;border-radius:999px;
-  background:#eaf2e4;color:#3e7d4f;border:1px solid #d7e3d0;
-}
-
-/* ── 项目 ── */
-.section-title{
-  margin:88px 0 6px;text-align:center;
-  font-family:Georgia,"Noto Serif SC",serif;font-size:30px;font-weight:400;color:#2e5f3b;
-}
-.section-sub{
-  text-align:center;font-size:12px;letter-spacing:.22em;color:#8aa08c;margin-bottom:40px;
-}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.card{
-  position:relative;display:block;
-  padding:30px 30px 26px;border:1px solid #d7e3d0;border-radius:16px;
-  background:#fafcf7;overflow:hidden;
-  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
-}
-.card::after{
-  content:"";position:absolute;inset:0;border-radius:16px;
-  background:linear-gradient(140deg,rgba(143,191,154,.12),transparent 62%);
-  opacity:0;transition:opacity .2s ease;pointer-events:none;
-}
-.card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(46,95,59,.13);border-color:#8fbf9a}
-.card:hover::after{opacity:1}
-.card-no{
-  font-family:Georgia,serif;font-size:13px;letter-spacing:.18em;color:#8aa08c;
-}
-.card h3{margin:10px 0 4px;font-size:20px;font-weight:600;color:#22331f}
-.card .en{font-size:12.5px;letter-spacing:.1em;color:#8aa08c}
-.card p{margin:14px 0 0;font-size:14px;line-height:1.85;color:#4d6350}
-.card-foot{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-top:20px;padding-top:16px;border-top:1px solid #e4ecdd;
-}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips b{
-  font-weight:400;font-size:11.5px;padding:3px 9px;border-radius:6px;
-  background:#eaf2e4;color:#3e7d4f;
-}
-.go{
-  flex:none;width:32px;height:32px;border-radius:50%;
-  display:grid;place-items:center;background:#2e5f3b;color:#f4f8f0;
-  transition:transform .2s ease;
-}
-.card:hover .go{transform:translate(3px,-3px)}
-.go svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-
-/* ── 求职 ── */
-.hire{
-  margin:26px 0 0;padding:52px 44px;text-align:center;
-  border:1px solid #d7e3d0;border-radius:18px;
-  background:linear-gradient(160deg,#fafcf7,#eef5e9);
-}
-.hire h2{font-family:Georgia,"Noto Serif SC",serif;font-size:26px;font-weight:400;color:#2e5f3b}
-.hire p{margin:16px auto 0;max-width:520px;font-size:15px;line-height:1.95;color:#5c6b5e}
-.hire-actions{display:flex;justify-content:center;gap:14px;margin-top:28px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:12px 24px;border-radius:999px;font-size:14px;
-  border:1px solid #2e5f3b;color:#2e5f3b;background:transparent;
-  transition:background .18s ease,color .18s ease,transform .18s ease;
-}
-.btn:hover{background:#2e5f3b;color:#f4f8f0;transform:translateY(-2px)}
-.btn.primary{background:#2e5f3b;color:#f4f8f0}
-.btn.primary:hover{background:#275434}
-.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-
-/* ── 页脚 ── */
-footer{
-  margin-top:88px;padding:32px 0 40px;
-  border-top:1px solid #d7e3d0;
-  display:flex;justify-content:space-between;align-items:center;
-  font-size:12.5px;color:#8aa08c;letter-spacing:.04em;flex-wrap:wrap;gap:12px;
-}
-footer a{color:#3e7d4f;border-bottom:1px solid transparent;transition:border-color .15s}
-footer a:hover{border-bottom-color:#8fbf9a}
-
-/* ── 入场动画（渐进增强：默认可见，JS 加 .anim 后才播）── */
-.anim .rise{opacity:0;transform:translateY(18px);animation:rise .7s cubic-bezier(.22,.9,.3,1) forwards}
-@keyframes rise{to{opacity:1;transform:none}}
-.anim .d1{animation-delay:.05s}.anim .d2{animation-delay:.16s}.anim .d3{animation-delay:.27s}
-.anim .d4{animation-delay:.38s}.anim .d5{animation-delay:.49s}.anim .d6{animation-delay:.6s}
-
-@media (max-width:860px){
-  .wrap{padding:0 22px}
-  h1{font-size:38px}
-  .grid{grid-template-columns:1fr}
-  .about{flex-direction:column;text-align:center;padding:32px 24px;gap:22px}
-  .tags{justify-content:center}
-  .stats{gap:26px;flex-wrap:wrap}
-  .contact{flex-wrap:wrap;gap:14px}
-  .contact .sep{display:none}
-  .nav-links{gap:16px;font-size:12.5px}
-  .hire{padding:38px 22px}
-  footer{justify-content:center;text-align:center}
-}
-@media (prefers-reduced-motion:reduce){
-  .anim .rise{animation:none;opacity:1;transform:none}
-  *{transition:none!important}
-}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none;border-top-color:#d7e3d0}}
 </style>
-<script>
-/* 入场动画渐进增强：内容默认可见；仅当环境支持动画时才加 .anim 播放。
-   这样爬虫截图 / 禁用 JS / 老浏览器都能看到完整内容。 */
-(function(){
-  var d = document.documentElement;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (!('animation' in d.style) || !window.requestAnimationFrame) return;
-  d.classList.add('anim');
-  // 兜底：动画若因故未执行（如后台标签页/无 GPU），2.5s 后强制显示
-  setTimeout(function(){ d.classList.remove('anim'); }, 2500);
-})();
-</script>
 </head>
 <body>
-
-<!-- 森林底纹 -->
-<svg id="bg" width="0" height="0" aria-hidden="true" style="position:absolute">
-  <defs>
-    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
-      <path d="M64 0H0v64" fill="none" stroke="#2e5f3b" stroke-width=".4" opacity=".055"/>
-    </pattern>
-  </defs>
-  <rect width="100%" height="100%" fill="url(#grid)"/>
-</svg>
-
-<nav class="nav">
-  <div class="wrap">
-    <div class="brand">
-      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M24 6 12 26h7v16h10V26h7L24 6Z" fill="#2e5f3b"/>
-        <path d="M24 14 17 27h5v9h4v-9h5L24 14Z" fill="#8fbf9a"/>
-      </svg>
-      <span>兰朔 · 作品集</span>
-    </div>
-    <div class="nav-links">
-      <a href="#about">关于</a>
-      <a href="#works">项目</a>
-      <a href="#contact">联系</a>
-      <a href="https://github.com/shuolan009-del" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero wrap">
-  <div class="kicker rise d1">PORTFOLIO</div>
-  <h1 class="rise d1">前端体验工程师<br><em>把 AI 做得安静好用</em></h1>
-  <p class="sub rise d2">
-    专注 AI 应用从界面到落地的完整链路：从 octop 二次开发的编辑风控制台，
-    到客服智能体与 RAG 知识库。喜欢把复杂系统做得安静、清晰、好用。
-  </p>
-
-  <div class="contact rise d3">
-    <span>
-      <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
-      <a href="mailto:3036684030@qq.com">3036684030@qq.com</a>
-    </span>
-    <i class="sep"></i>
-    <span>
-      <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
-      19504095551
-    </span>
-    <i class="sep"></i>
-    <span>
-      <svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 2.3-.3 4.5-1.2 4.5-5a3.9 3.9 0 0 0-1-2.7 3.6 3.6 0 0 0-.1-2.7s-.9-.3-3 1a10 10 0 0 0-5 0c-2.1-1.3-3-1-3-1a3.6 3.6 0 0 0-.1 2.7A3.9 3.9 0 0 0 4 8.5c0 3.8 2.2 4.7 4.5 5-.6.6-.6 1.2-.5 2V21"/></svg>
-      <a href="https://github.com/shuolan009-del" target="_blank" rel="noopener">github.com/shuolan009-del</a>
-    </span>
+  <div class="box">
+    <div class="spin" id="spin"></div>
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M24 6 12 26h7v16h10V26h7L24 6Z" fill="#2e5f3b" opacity=".9"/>
+      <path d="M24 14 17 27h5v9h4v-9h5L24 14Z" fill="#8fbf9a"/>
+    </svg>
+    <div class="kicker">PORTFOLIO</div>
+    <h1>正在前往作品集</h1>
+    <p>如果没有自动跳转，请点击下方按钮。</p>
+    <a class="go" href="https://82.157.150.111/portfolio/#v03">
+      打开兰朔 · 作品集
+      <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+    <div class="src">82.157.150.111/portfolio/</div>
   </div>
 
-  <a class="cta rise d4" href="https://82.157.150.111/portfolio/" target="_blank" rel="noopener">
-    查看完整作品集
-    <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
-  </a>
-
-  <div class="stats rise d5">
-    <div><b>4</b><span>精选项目</span></div>
-    <div><b>3</b><span>AI 系统落地</span></div>
-    <div><b>5</b><span>核心技术栈</span></div>
-    <div><b>2C2G</b><span>可部署架构</span></div>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <section id="about" class="about rise d6">
-    <div class="about-ava">兰</div>
-    <div>
-      <p>
-        前端体验工程师，专注 AI 应用从界面到落地的完整链路：从 octop 二次开发的编辑风控制台，
-        到客服智能体与 RAG 知识库。喜欢把复杂系统做得安静、清晰、好用。
-      </p>
-      <div class="tags">
-        <i>Python</i><i>LangGraph</i><i>FastAPI</i><i>RAG / Milvus</i>
-        <i>octop 二次开发</i><i>Electron</i>
-      </div>
-    </div>
-  </section>
-
-  <h2 class="section-title">精选项目</h2>
-  <p class="section-sub">SELECTED WORKS · 从林地到产品</p>
-
-  <section id="works" class="grid">
-
-    <a class="card rise d2" href="https://82.157.150.111/" target="_blank" rel="noopener">
-      <div class="card-no">01</div>
-      <h3>嘉禾智能商管平台</h3>
-      <div class="en">JIAHE PLATFORM</div>
-      <p>三合一的商户运营中台：统一门户串起客服、运营、知识库三条业务线，共用一套嘉禾品牌设计令牌与命名规范。</p>
-      <div class="card-foot">
-        <div class="chips"><b>Vue 3</b><b>FastAPI</b><b>设计令牌</b></div>
-        <span class="go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </div>
-    </a>
-
-    <a class="card rise d3" href="https://82.157.150.111/cs/" target="_blank" rel="noopener">
-      <div class="card-no">02</div>
-      <h3>AI 电商客服</h3>
-      <div class="en">CUSTOMER SERVICE</div>
-      <p>对话引擎三轨分流（任务 / 知识 / 闲聊），叠加数字人 WebSocket 播报；前端拆成分层架构，2509 行单体收敛为编排层。</p>
-      <div class="card-foot">
-        <div class="chips"><b>LangGraph</b><b>数字人 WS</b><b>Vue 3</b></div>
-        <span class="go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </div>
-    </a>
-
-    <a class="card rise d4" href="https://github.com/shuolan009-del/ecommerce-operation-assistant" target="_blank" rel="noopener">
-      <div class="card-no">03</div>
-      <h3>AI 电商运营助手</h3>
-      <div class="en">OPERATION ASSISTANT</div>
-      <p>LangGraph 多 Agent 运营中枢：选品、竞品、库存、趋势分析串成一条流水线；前端内置演示模式，无后端即可完整走查。</p>
-      <div class="card-foot">
-        <div class="chips"><b>多 Agent</b><b>Next.js</b><b>Alembic</b></div>
-        <span class="go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </div>
-    </a>
-
-    <a class="card rise d5" href="https://github.com/shuolan009-del/knowledge-base" target="_blank" rel="noopener">
-      <div class="card-no">04</div>
-      <h3>AI 知识库</h3>
-      <div class="en">KNOWLEDGE BASE</div>
-      <p>文档导入 + 检索问答双管线。零中间件单进程重构：Milvus Lite 嵌入式、SQLite 会话历史、本地目录存储，2 核 2G 可部署。</p>
-      <div class="card-foot">
-        <div class="chips"><b>RAG</b><b>Milvus Lite</b><b>三档 Embedding</b></div>
-        <span class="go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-      </div>
-    </a>
-
-  </section>
-
-  <section id="contact" class="hire rise d6">
-    <h2>期待加入贵公司</h2>
-    <p>我正在寻找新的发展机会，真诚希望能加入贵公司，与团队一起把 AI 产品做到安静、清晰、好用。感谢您的时间，我们下次再见。</p>
-    <div class="hire-actions">
-      <a class="btn primary" href="mailto:3036684030@qq.com">
-        <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
-        发送邮件
-      </a>
-      <a class="btn" href="tel:19504095551">
-        <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
-        拨打电话
-      </a>
-      <a class="btn" href="https://github.com/shuolan009-del" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 2.3-.3 4.5-1.2 4.5-5a3.9 3.9 0 0 0-1-2.7 3.6 3.6 0 0 0-.1-2.7s-.9-.3-3 1a10 10 0 0 0-5 0c-2.1-1.3-3-1-3-1a3.6 3.6 0 0 0-.1 2.7A3.9 3.9 0 0 0 4 8.5c0 3.8 2.2 4.7 4.5 5-.6.6-.6 1.2-.5 2V21"/></svg>
-        GitHub
-      </a>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <span>© 2026 兰朔 · 森林作品集</span>
-  <span><a href="https://82.157.150.111/portfolio/" target="_blank" rel="noopener">82.157.150.111/portfolio</a> ↗</span>
-</footer>
-
+<script>
+/* 与 <meta refresh> 双保险：replace 不留历史记录，
+   用户按「后退」会回到 GitHub 而不会再次被弹走。 */
+var TARGET = 'https://82.157.150.111/portfolio/#v03';
+try {
+  if ('replaceState' in history) {
+    history.replaceState(null, '', location.pathname);  // 先擦掉本页，防后退回跳
+  }
+  location.replace(TARGET);
+} catch (e) {
+  /* file:// 或受限环境：忽略，交给 meta refresh 与手链 */
+}
+/* 转圈只短暂显示，随后移除 */
+setTimeout(function(){
+  var s = document.getElementById('spin');
+  if (s) s.style.display = 'none';
+}, 2000);
+</script>
 </body>
 </html>
