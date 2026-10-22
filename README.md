@@ -3,8 +3,8 @@
 GitHub Pages 跳转页：访问即跳转到服务器版作品集。
 
 - 在线地址：<https://shuolan009-del.github.io/portfolio/>
-- 跳转目标：<https://82.157.150.111/portfolio/#v03>
-- 服务器版本（作品集本体）：<https://82.157.150.111/portfolio/>
+- 跳转目标：<https://82.157.150.111/portfolio/wangben/#v03>
+- 服务器版本（作品集本体）：<https://82.157.150.111/portfolio/wangben/>
 
 ## 行为
 
